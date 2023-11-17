@@ -1,0 +1,8 @@
+<form method="post" action="{% url 'vote' %}">
+    {%csrf_token%}
+	<input type="hidden" name="post" value="{{post.id}}" />
+	<input type="hidden" name="direction" value="{{dir}}" />
+	<button type="submit" class="vote_button {{kind}}">
+		<span class="glyphicon glyphicon-menu-{{kind}}" aria-hidden="true"></span>
+	</button>
+</form> 

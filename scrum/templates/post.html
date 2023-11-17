@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% include "post_overview.html" %}
+
+<div class="panel panel-default">
+	<div class="pannel-body">
+		{{ post.text }}
+	</div>
+</div>
+{% for comment in post.comments.all %}
+	{% include "comment.html" %}
+{% endfor %}
+
+{% include "comment_ui.html" %}
+
+
+{% endblock content %}

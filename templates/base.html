@@ -1,0 +1,169 @@
+{% load static %}
+<!--flag{Phoenix-telehack}-->
+<!doctype html>
+<html>
+	<head>
+		<title>Phoenix CTF{% if title %} | {{title}}{% endif %}</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+		<script src="{% static 'jquery-2.2.4.min.js' %}"></script>
+		<script src="{% static 'bootstrap.min.js' %}"></script>
+	</head>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Aclonica&family=Acme&family=Alkatra:wght@600&family=Caprasimo&family=Kdam+Thmor+Pro&family=Rubik&family=Space+Grotesk&family=Space+Mono:ital,wght@0,400;0,700;1,700&display=swap');
+		
+		body{
+			font-family:'Kdam Thmor Pro',serif ;
+			min-height: 100vh;
+			padding: 0;
+			margin: 0;
+		}
+		.navbar .navbar-default{
+			display: flex; 
+			align-items:center; 
+			justify-content:sapce-between;
+		}
+		.container-fluid{
+			position: relative;
+			height: 80px;
+			padding: 15px 8%;
+		}
+		.navbar-right{
+			position: absolute;
+			top: 25px;
+			right: 15%;
+			margin-left: 15px;
+		}
+		.content{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			gap: 2rem;
+		}
+		.dropdown-toggle{
+			background-color: black;
+			border: 1px solid black;
+			outline: none;
+			transition: .3s;
+		}
+		.dropdown-toggle:hover,.dropdown-toggle:focus{
+			background-color: white;
+			color: black;
+		}
+		.posts{
+			display: grid;
+			grid-template-columns: auto auto auto;
+			column-gap:2rem ;
+			row-gap: 3rem;
+		}
+		.post{
+			width: 350px;
+			min-height: 250px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			border: 2px solid black;
+			border-radius: 25px;
+			padding: 25px;
+			gap: 2rem;
+		}
+		.main-heading{
+			font-size: 70px;
+			font-weight: 600;
+		}
+		.li-element{
+			transition: .5s;
+			font-weight: 600;
+		}
+		.li-element:hover{
+			scale: 1.1;
+		}
+		.vote_button{
+			padding: 5px;
+			background-color: transparent;
+			color: black;
+			border-radius: 2rem;
+		}
+		pre{
+			width: fit-content;
+			position: absolute;
+			bottom: -90%;
+			left: 5%;
+		}
+		pre .exit{
+			position: absolute;
+			top: 0;
+			right: 5px;
+			color: red;
+		}
+		.warn{
+			font-weight: 600;
+			color: red;
+			border-radius:50% ;
+			padding: 5px 10px;
+			cursor: pointer;
+			bottom: -70%;
+			transition: .5s;
+		}
+		.hidden{
+			display: none;
+		}
+
+	</style>
+	<body>
+		<nav class="navbar navbar-default" >
+			<div class="container-fluid">
+				<div class="navbar-header">
+		        <a class="navbar-brand" href="{% static 'YouNeedToGet10000VotesInOneOfYourPosts.png' %}" download="YouNeedToGet10000VotesInOneOfYourPosts.png"><img src="{% static 'phoenix.png'%}" height="65" style="position: absolute; top:5%; left:5%;"></a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		    	<ul class="nav navbar-nav">
+					<li class="li-element"><a href="{% url 'home' %}">Home</a></li>
+					<li class="li-element"><a href="{% url 'create_post' %}">Create Post</a></li>
+					{% if user.is_authenticated %}
+					<li class="li-element"><a href="{% url 'logout' %}">Log Out</a></li>
+					{% else %}
+					<li class="li-element"><a href="{% url 'login' %}">Log In</a></li>
+					{% endif %}
+				</ul>
+				<img src="{% static 'NotThisOneTheOtherContainsHint.png'%}" height="65" style="position: absolute; top:5%; right:5%;">
+				{% if user.is_authenticated %}
+					<ul class="nav navbar-nav navbar-right">
+	       				<li> {{ request.user.username }} <br> score: {{request.user.denorm_score }} <br> <br>
+						    </li>
+						   
+	       			</ul>
+					{% if user.score >= 20 %}
+					
+					<pre class="warn">!</pre>
+					<pre class="hint hidden"> You have more than 20 points score <br>     <span style="color: red;"> HINT</span> :"CHECK THE LOGOS"  <span class="exit">X</span></pre> 
+					{% endif %}
+       			{% endif %}
+			</div>
+		</nav>
+		{% block content %}
+		{% endblock %}
+	</body>
+	<script>
+		var i;
+		const hint=document.querySelector('.hint');
+		const exit=document.querySelector('.exit');
+		const notification=document.querySelector('.warn')
+		exit.style.cursor='pointer';
+		exit.onclick=()=>{
+			hint.classList.add('hidden');
+		}
+		notification.onclick=()=>{
+			console.log(hint)
+			if(hint.classList.contains('hidden')){
+				hint.classList.remove('hidden')
+			}
+			else{
+				hint.classList.add('hidden')
+			}
+		}
+
+	</script>
+</html>

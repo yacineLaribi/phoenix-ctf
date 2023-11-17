@@ -1,0 +1,27 @@
+
+<div class="post">
+		
+		<div class="vote">
+		vote:
+			{% include "vote_button.html" with kind="up" dir=1 %}
+			{{ post.score }}
+			{% include "vote_button.html" with kind="down" dir=-1 %}
+		</div>
+			{% if post.score >= 10000 %}
+				{% ifequal post.author.id request.user.id %}
+					<span class="flag">
+						flag{01010000 01101000 01101111 01100101 01101110 01101001 01111000 00100000 01101001 01110011 00100000 01110100 01101000 01100101 00100000 01100010 01100101 01110011 01110100}
+					</span>
+				{% endifequal %}
+			{% endif %}
+		<div class="heading">
+			<h2>{% if post.url %}<a href="{{post.url}}">{{post.title}}</a>{% else %}{{post.title}}{% endif %}</h2>
+		</div>
+			<p>{{post.text}}</p>
+	
+	<div>
+		<div class="meta">
+			By {{post.author.username}} ({{post.author.denorm_score}}) <br/><a href="{{ post.get_view_url }}">comments</a>
+		</div>
+	</div>
+</div>

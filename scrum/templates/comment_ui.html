@@ -1,0 +1,12 @@
+<form method="post" action="">
+{% csrf_token %}
+	{% if form.errors %}
+		{{ form.errors }}
+	{% endif %}
+	<table>
+		<tr>
+		    <td>{{ form.text }}</td>
+		</tr>
+	</table>
+	<input type="submit" value="post comment"/>
+</form>
