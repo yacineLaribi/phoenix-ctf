@@ -5,7 +5,7 @@ The first flag
 View source. It is the first thing you see.
 
 ```html
-<!--flag{3@zy-p1ck1ng5}-->
+<!--flag{phoenix-telehack}-->
 ```
 
 The second flag
@@ -42,7 +42,7 @@ From this, you can develop a theory that the programmer intends for every user t
 Now clicking the upvote button makes your score hit 10 000 and reveals the flag.
 
 ```
-flag{v0x-p0pul1}
+flag{phoenix-is-the-best}
 ```
 
 The third flag
