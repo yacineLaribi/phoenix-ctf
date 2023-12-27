@@ -2,9 +2,12 @@ This CTF challenge is aimed at beginners.
 
 There are 3 flags hidden throughout this web app.
 
-- The first flag is hidden on every page
-- The second flag is revealed if you create a post with over 10,000 points
-- The third flag is the password of one of the users
+- The first flag is obvious .
+- The second flag is revealed when you do some specific thigs .
+- The third flag is the password of one of the users .
+
+/_Note_/
+I can't post the details with you , because this CTF isn't published yet , when they complete it in the competition , i will post the details with you and a WRITEUP.md to explain how to solve it !
 
 /_How to run_/
 

