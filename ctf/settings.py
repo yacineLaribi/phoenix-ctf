@@ -26,7 +26,7 @@ SECRET_KEY = '!r)n_+li=az#e!_7wgrg@d&z1n!y-g_r$+0ebbrh02$-^es%6c'
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '192.168.106.17']
+ALLOWED_HOSTS = ['localhost','phoenixesgee.pythonanywhere.com','telehack.pythonanywhere.com', '127.0.0.1', '192.168.106.17']
 
 
 

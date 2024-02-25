@@ -69,3 +69,6 @@ class SignUp(View):
 				login(request, user)
 				return redirect('/')
 		return render(request, 'registration/signup.html', {'form': form})
+
+def Flag(request):
+	return render(request,'flag.html')

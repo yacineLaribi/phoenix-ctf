@@ -40,6 +40,7 @@
 			justify-content: center;
 			flex-direction: column;
 			gap: 2rem;
+			width:100vw;
 		}
 		.dropdown-toggle{
 			background-color: black;
@@ -57,6 +58,18 @@
 			column-gap:2rem ;
 			row-gap: 3rem;
 		}
+		@media (max-width: 768px) {
+			.posts{
+				display: grid;
+				grid-template-columns: auto;
+			}
+			.post{
+			width: 80vw;
+			min-height: 250px;
+			font-size:25px;
+			}
+			
+		}
 		.post{
 			width: 350px;
 			min-height: 250px;
@@ -69,6 +82,7 @@
 			padding: 25px;
 			gap: 2rem;
 		}
+
 		.main-heading{
 			font-size: 70px;
 			font-weight: 600;
@@ -91,6 +105,7 @@
 			position: absolute;
 			bottom: -90%;
 			left: 5%;
+			z-index:3;
 		}
 		pre .exit{
 			position: absolute;
@@ -154,10 +169,13 @@
 						    </li>
 						   
 	       			</ul>
-					{% if user.score >= 20 %}
+					{% if user.score >= 20 and  user.score < 50 %}
 					
 					<pre class="warn">!</pre>
 					<pre class="hint hidden"> You have more than 20 points score <br>     <span style="color: red;"> HINT</span> :"CHECK THE TELEHACK LOGO ON THE TOP RIGHT"  <span class="exit">X</span></pre> 
+					{% elif user.score >= 50 %}
+					<pre class="warn">!</pre>
+					<pre class="hint hidden"> Congrats ! You have more than 50 points score <br>     <span style="color: red;"> HINT</span> :"YOU GET EXTRA POINTS FOR MAKING A BRUTEFORCE CODE AND SUBMITTING IT !"  <span class="exit">X</span></pre> 
 					{% endif %}
        			{% endif %}
 			</div>

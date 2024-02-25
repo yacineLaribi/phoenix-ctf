@@ -16,3 +16,10 @@ body {
 .heading, .heading h2 {
 	display: inline;
 }
+
+
+@media screen and (max-width:768px) {
+	.posts{
+	grid-template-columns: auto;
+	}
+}
