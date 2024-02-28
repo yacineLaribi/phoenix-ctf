@@ -21,6 +21,7 @@ import scrum.views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^flag/', scrum.views.Flag, name='flag'),
+    url(r'^rules/', scrum.views.Rules, name='rules'),
     url(r'^vote/$', scrum.views.Vote.as_view(), name='vote'),
     url(r'^login/$', auth_views.LoginView.as_view(), name="login"),
     url(r'^logout/$', auth_views.LogoutView.as_view(), {'next_page': '/'}, name="logout"),

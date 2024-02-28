@@ -155,6 +155,7 @@
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		    	<ul class="nav navbar-nav">
 					<li class="li-element"><a href="{% url 'home' %}">Home</a></li>
+					<li class="li-element"><a href="{% url 'rules' %}">Rules</a></li>
 					<li class="li-element"><a href="{% url 'create_post' %}">Create Post</a></li>
 					{% if user.is_authenticated %}
 					<li class="li-element"><a href="{% url 'logout' %}">Log Out</a></li>
@@ -162,7 +163,8 @@
 					<li class="li-element"><a href="{% url 'login' %}">Log In</a></li>
 					{% endif %}
 				</ul>
-				<img src="{% static 'NotThisOneTheOtherContainsHint.png'%}" height="65" style="position: absolute; top:5%; right:5%;">
+
+				<img src="{% static 'NotThisOneTheOtherContainsHint.jpg'%}" height="65" style="position: absolute; top:5%; right:5%;mix-blend-mode: darken; ">
 				{% if user.is_authenticated %}
 					<ul class="nav navbar-nav navbar-right">
 	       				<li> {{ request.user.username }} <br> score: {{request.user.denorm_score }} <br> <br>

@@ -72,3 +72,7 @@ class SignUp(View):
 
 def Flag(request):
 	return render(request,'flag.html')
+
+def Rules(request):
+	return render(request,'rules.html')
+	
