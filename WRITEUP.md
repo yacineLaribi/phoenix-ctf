@@ -88,16 +88,14 @@ Anyway if by any chance you find this flag you will have to decode it using the 
 By using "Inspect Element" (or equivalent) in your browser's dev tools, you can find a div with display='hidden' and the classname is 'rot-13'
 So by decoding the content of the div with the ROT-13 online decoder (there are many of them..) , you will find :
 ```
-
 flag{congrats-u-found-the-fourth-flag-with-rot13-cipher}
 ```
 
 The fifth flag
 ==============
 
-One of the hints is 'Digital images can contain data too !' , and the website contains only 2 images (logos) if you take the telhack logo (the right image) into a functional 'stegnographic decoder' you will find the fifth flag :
+One of the hints is `Digital images can contain data too !` , and the website contains only `2 images` (logos) if you take the `telhack logo` (the right image) into a functional `stegnographic decoder` you will find the fifth flag :
 ```
-
 flag{st3g4n0gr4phy-1n-t3l3h4ck-l0g0}
 ```
 Note :
