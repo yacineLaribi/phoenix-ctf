@@ -78,15 +78,14 @@ The fourth flag
 ==============
 In the place of competition there are several Qr codes one of them leads to this url : `ctf-website-domain/flag` , it is obvious the content of the page is : 
 ```
-
 you're almost there !
 
 just search carefully ...
 
 Anyway if by any chance you find this flag you will have to decode it using the classname !
 ```
-By using "Inspect Element" (or equivalent) in your browser's dev tools, you can find a div with display='hidden' and the classname is 'rot-13'
-So by decoding the content of the div with the ROT-13 online decoder (there are many of them..) , you will find :
+By using "Inspect Element" (or equivalent) in your browser's dev tools, you can find a div with `display='hidden'` and the classname is `rot-13`
+So by decoding the content of the div with the `ROT-13 online decoder` (there are many of them..) , you will find :
 ```
 flag{congrats-u-found-the-fourth-flag-with-rot13-cipher}
 ```
