@@ -76,7 +76,7 @@ Note: In reality this password would probably be hashed. In fact, there were wor
 
 The fourth flag
 ==============
-In the place of competition there are several Qr codes one of them leads to this url == "ctf-website-domain/flag" , it is obvious the content of the page is : 
+In the place of competition there are several Qr codes one of them leads to this url : `ctf-website-domain/flag` , it is obvious the content of the page is : 
 ```
 
 you're almost there !
