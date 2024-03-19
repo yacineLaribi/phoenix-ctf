@@ -1,6 +1,6 @@
 This CTF challenge is aimed at beginners.
 
-There are 3 flags hidden throughout this web app.
+There are 5 flags hidden throughout this web app.
 
 - The first flag is obvious .
 - The second flag is revealed when you do some specific thigs .
