@@ -73,3 +73,33 @@ flag{0rm-1nj3ct1on}
 ```
 
 Note: In reality this password would probably be hashed. In fact, there were workarounds put in place in this app to prevent Django's automatic password hashing. There are real (if poor) reasons that passwords would not be hashed in the wild, however (perhaps they are stored in some legacy system, or perhaps the author of the app is aggressively incompetent).
+
+
+The fourth flag
+==============
+In the place of competition there are several Qr codes one of them leads to this url == "ctf-website-domain/flag" , it is obvious the content of the page is : 
+'''html
+you're almost there !
+
+just search carefully ...
+
+Anyway if by any chance you find this flag you will have to decode it using the classname !
+'''.
+By using "Inspect Element" (or equivalent) in your browser's dev tools, you can find a div with display='hidden' and the classname is 'rot-13'
+So by decoding the content of the div with the ROT-13 online decoder (there are many of them..) , you will find :
+'''html
+flag{congrats-u-found-the-fourth-flag-with-rot13-cipher}
+'''
+
+The fifth flag
+==============
+
+One of the hints is "Digital images can contain data too !" , and the website contains only 2 images (logos) if you take the telhack logo (the right image) into a functional stegnographic decoder you will find the fifth flag :
+'''html
+flag{st3g4n0gr4phy-1n-t3l3h4ck-l0g0}
+'''
+Note :
+	* A lot of steganographic decoders don't work in the internet , you will have to test it by coding an image and decoding it , before decoding the logo !
+ 	* There are other random flags that i removed , because they were related to a lot of other hints in place ! the special thing about those flags that they were related to time , specific ones appear in the console or in one of the pages according to time .
+
+
