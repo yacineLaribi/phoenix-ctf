@@ -5,9 +5,11 @@ There are 3 flags hidden throughout this web app.
 - The first flag is obvious .
 - The second flag is revealed when you do some specific thigs .
 - The third flag is the password of one of the users .
+- The fourth flag is in a page in one of the hidden urls.
+- The fifth flag is in one of the images
 
 /_Note_/
-I can't post the details with you , because this CTF isn't published yet , when they complete it in the competition , i will post the details with you and a WRITEUP.md to explain how to solve it !
+If you are looking for the solution of this ctf check `WRITEUP.md` file !
 
 /_How to run_/
 
@@ -23,4 +25,9 @@ python manage.py runserver
 
 /_WARNING_/
 
-this CTF challenge was created for educational purposes no more , you don't want to host it anywhere!
+this CTF challenge was created for educational purposes no more , you don't want to host it anywhere! (only if it's for a legal competition )
+
+
+/_CHECK_IF_YOU_WANT_/
+
+URL : https://phoenixesgee.pythonanywhere.com/
