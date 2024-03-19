@@ -8,10 +8,13 @@ There are 5 flags hidden throughout this web app.
 - The fourth flag is in a page in one of the hidden urls.
 - The fifth flag is in one of the images
 
-/_Note_/
+Note
+====
+
 If you are looking for the solution of this ctf check `WRITEUP.md` file !
 
-/_How to run_/
+How to run
+==========
 
 as any django web app you need first to download python , than django , than venv to create a virtual env folder in your pc
 then you are going to put this folder inyour venv folder and activate it , once activated (the venv) , you have to add the static files by typing the command:
@@ -23,11 +26,14 @@ python manage.py migrate
 and finally you can run the server using the command:
 python manage.py runserver
 
-/_WARNING_/
+WARNING
+=======
 
 this CTF challenge was created for educational purposes no more , you don't want to host it anywhere! (only if it's for a legal competition )
 
 
-/_CHECK_IF_YOU_WANT_/
+CHECK IT IF YOU WANT 
+====================
+
 
 URL : https://phoenixesgee.pythonanywhere.com/
